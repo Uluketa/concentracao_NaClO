@@ -9,10 +9,11 @@ document.addEventListener('click', (el) => {
 
         if (typeof extensaoInput !== 'number' || typeof diametroInput !== 'number') 'Insira somente números';
 
-        const volume = (((diametroInput / 2) / 1000) * 3.14) * extensaoInput;
-        const concentracao = ((volume * 1000) * 200) / 100000;
+        const volume = ((((diametroInput / 2) / 1000) ** 2) * 3.14) * extensaoInput;
 
-        paragrafo.innerText = concentracao.toFixed(2) + ' mg/L';
+        const quantidade = ((volume * 1000) * 200) / 100000;
+
+        paragrafo.innerText = quantidade.toFixed(2) + ' L';
 
         el.preventDefault();
     }
