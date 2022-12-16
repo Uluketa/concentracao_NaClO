@@ -13,5 +13,7 @@ document.addEventListener('click', (el) => {
         const concentracao = ((volume * 1000) * 200) / 100000;
 
         paragrafo.innerText = concentracao.toFixed(2) + ' mg/L';
+
+        el.preventDefault();
     }
-})
+});
