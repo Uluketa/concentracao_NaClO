@@ -14,6 +14,7 @@ document.addEventListener('click', (el) => {
         const quantidade = ((volume * 1000) * 200) / 100000;
 
         paragrafo.innerText = quantidade.toFixed(2) + ' L';
+        paragrafo.style.display = 'block';
 
         el.preventDefault();
     }
